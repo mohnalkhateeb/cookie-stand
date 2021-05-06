@@ -111,12 +111,15 @@ let Dubi = new sallocation('Dubi',11,38,3.7)
 let Paris= new sallocation('Paris',20,38,2.3) 
 let Lima= new sallocation('Lima',2,16, 4.6)
     
-
-seattle.render()
-tokyo.render()
-Dubi.render()
-Paris.render()
-Lima.render()
+for(let c=0;c<LocationArr.length;c++)
+{
+   LocationArr[c].render()
+}
+//seattle.render()
+//tokyo.render()
+//Dubi.render()
+//Paris.render()
+//Lima.render()
 
 function renderLastTr()
 {
