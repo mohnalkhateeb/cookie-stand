@@ -6,6 +6,7 @@ let LocationArr= []
 let BigTotal =0
 let hourcookietotal =[];
 let tableEl = document.createElement('table')
+//let lastTr= document.createElement('tr')
 function createTableHeader()
 {
     let tableParent = document.getElementById('table')
@@ -25,7 +26,7 @@ function createTableHeader()
     TotalHed.textContent = 'Daily Location Total'
     headTr.appendChild(TotalHed)
 }
-createTableHeader();
+
 function sallocation(locationname,mincustumer,maxcustumer,avgcookies)
 {
     this.locationname =locationname;
@@ -110,16 +111,29 @@ let tokyo = new sallocation('tokyo',3,24,1.2)
 let Dubi = new sallocation('Dubi',11,38,3.7)
 let Paris= new sallocation('Paris',20,38,2.3) 
 let Lima= new sallocation('Lima',2,16, 4.6)
-    
-for(let c=0;c<LocationArr.length;c++)
+
+let addingform = document.getElementById('new-store')
+addingform.addEventListener('submit',addstor)
+function addstor(event)
 {
-   LocationArr[c].render()
+    event.preventDefault();
+    let lname = event.target.lname.value;
+  let mincustm = event.target.mincustm.value;
+  let maxcustm = event.target.maxcustm.value;
+  let avgcookie = event.target.avgcookie.value;
+
+   let added = new sallocation(lname,mincustm,maxcustm,avgcookie);
+    tableEl.innerHTML='';
+    finalrender();
+    renderLastTr();
+  
 }
-//seattle.render()
-//tokyo.render()
-//Dubi.render()
-//Paris.render()
-//Lima.render()
+
+
+
+
+
+
 
 function renderLastTr()
 {
@@ -137,13 +151,14 @@ for (let c=0;c<timehour.length;c++)
         sum1 += LocationArr[k].hourcookie[c]
        
     }
- hourcookietotal.push(sum1)
+ hourcookietotal[c]=sum1;
 }
 let lastTr= document.createElement('tr')
 tableEl.appendChild(lastTr)
 let totTd= document.createElement('td')
 totTd.textContent = 'Total'
 lastTr.appendChild(totTd)
+
 for(let i=0;i<hourcookietotal.length;i++)
 {
     let hcooktotTd= document.createElement('td')
@@ -154,11 +169,22 @@ let alltotTd= document.createElement('td')
 alltotTd.textContent = BigTotal
 lastTr.appendChild(alltotTd)
 }
+
+function finalrender()
+{ 
+    createTableHeader();
+for(let c=0;c<LocationArr.length;c++)
+{
+   LocationArr[c].render()
+}
+
+}
+
+
+finalrender();
 renderLastTr()
-
-
-    
 console.log(hourcookietotal)
+console.log('location ='+ LocationArr.length)
 
 /*let Seattle={
     name:'seattle',

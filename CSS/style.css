@@ -230,5 +230,22 @@ footer p{
   {
     float: left;
   }
+  form
+{
+    padding: 2em;
+}
+.sales
+{
+    background-color: skyblue;
+}
+input
+{
+    width: 8em;
+}
+button
+{
+    margin-left: 5em;
+    width: 8em;
+}
 
 
