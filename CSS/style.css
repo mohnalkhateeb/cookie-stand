@@ -236,10 +236,7 @@ footer p{
     padding: 2em;
     
 }
-.sales
-{
-    background-color: skyblue;
-}
+
 input
 {
     width: 8em;
@@ -271,4 +268,5 @@ main
 {
     padding-block: 25px;
     padding: inline 50px;
+    background-color: skyblue;
 }
