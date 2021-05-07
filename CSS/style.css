@@ -17,6 +17,9 @@ border-style:solid;
 padding:1em;
 margin: 2em;
 background-color: coral;
+border-color: black;
+font-family: Arial, Helvetica, sans-serif;
+color:black;
 }
   tr{
     display: table-row;
@@ -36,6 +39,9 @@ th{
     background-color:cyan; 
     width: 20px; ;
     border-style:solid;
+    font-family: Arial, Helvetica, sans-serif;
+    border-color: black;
+    color:purple;
 }
 header
 {
@@ -46,17 +52,20 @@ header
     position: sticky;
     top: 0;
     background-position:top;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 header nav ul li {
     display: inline-block;
     margin-left: 35px;
     vertical-align: middle;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 header nav ul li a
 {
     text-decoration: none;
     color: brown;
     font-size: 3em;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 header nav ul li img{
     width: 500px;
@@ -65,6 +74,7 @@ header nav ul li img{
 header nav ul li:first-child
 {
     margin-right: 100px;
+    
 }
 h1{
     display: block;
@@ -76,6 +86,7 @@ h1{
     font-weight: bold;
     text-align: center;
     background-color: blue;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 h3{
     display: block;
@@ -85,6 +96,7 @@ margin-bottom: 1em;
 margin-left: 0;
 margin-right: 0;
 font-weight: bold;
+font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #contact div
 {
@@ -112,6 +124,10 @@ margin-left: 0;
 margin-right: 0;
 font-weight: bold;
 }
+#contact h3{
+    font-family: Arial, Helvetica, sans-serif;
+    color:brown;
+}
 #vision
 {
     background-color: yellowgreen;
@@ -136,6 +152,7 @@ font-weight: bold;
     margin-top: 10px;
     margin-right: 200px;
     text-align: center;
+    
 
 }
 #contact div:last-child
@@ -144,6 +161,7 @@ font-weight: bold;
     margin-left: 200px;
     padding-bottom: 10px;
     text-align: center;
+    
 }
 body
 {
@@ -158,6 +176,7 @@ body
 }
 #product h3{
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 #product article:last-child div
 {
@@ -204,22 +223,17 @@ body
 }
 footer p{
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   footer
   {
     background-color: goldenrod;
   }
-  body
-  {
-
-     font-family: Arial, Helvetica, sans-serif;
-
-        /* border: 1px solid green; */
-      
-  }
+  
   #family h3
   {
     text-align: center;
+    font-family: Georgia, 'Times New Roman', Times, serif;
   }
   #family
   {
