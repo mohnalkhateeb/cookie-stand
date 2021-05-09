@@ -3,7 +3,7 @@
 let timehour = ['6:00 am', '7:00 am', '8:00 am', '9:00 am', '10:00 am', '11:00 am', 
 '12:00 am', '1:00 pm', '2:00 pm', '3:00 pm', '4:00 pm', '5:00 pm', '6:00 pm', '7:00 pm']
 let LocationArr= []
-let BigTotal =0
+
 let hourcookietotal =[];
 let tableEl = document.createElement('table')
 //let lastTr= document.createElement('tr')
@@ -64,6 +64,7 @@ sallocation.prototype.gethourcookies = function()
 }
 sallocation.prototype.gettotalcookie =function(){
     this.gethourcookies();
+    this.totalcookie = 0;
     for(let i=0;i< timehour.length;i++)
     {
         this.totalcookie +=this.hourcookie[i]
@@ -137,6 +138,7 @@ function addstor(event)
 
 function renderLastTr()
 {
+    let BigTotal =0
 for(let j=0;j<LocationArr.length;j++)
 {
     BigTotal += LocationArr[j].totalcookie
@@ -179,10 +181,10 @@ for(let c=0;c<LocationArr.length;c++)
 }
 
 }
-
-
 finalrender();
 renderLastTr()
+
+
 console.log(hourcookietotal)
 console.log('location ='+ LocationArr.length)
 
